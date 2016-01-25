@@ -1,0 +1,13 @@
+body {
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.border-top-solid {
+    border-top: 1px solid;
+}
+
+.year-section {
+    width: 100px;
+    text-align: center;
+}

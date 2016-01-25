@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/config.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.eot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.ttf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.woff" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/script/jquery-1.7.2.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/script/jquery-ui-1.8.20.custom.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/style/redmond" charset="UTF-8" />
+  </component>
+</project>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:mvc="http://www.springframework.org/schema/mvc"
+             xmlns:task="http://www.springframework.org/schema/task"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven/>
+    <tx:annotation-driven/>
+
+    <resources mapping="/script/**" location="/script/" />
+    <resources mapping="/style/**" location="/style/" />
+    <resources mapping="/bootstrap/**" location="/bootstrap/" />
+
+    <!--<mvc:view-controller path="/" view-name="index" />-->
+
+    <context:component-scan base-package="controller"/>
+    <beans:bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <beans:property name="mediaTypes">
+            <beans:map>
+                <beans:entry key="html" value="text/html"/>
+                <beans:entry key="json" value="application/json"/>
+            </beans:map>
+        </beans:property>
+        <beans:property name="viewResolvers">
+            <beans:list>
+                <beans:bean id="viewResolver"
+                            class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+                            p:viewClass="org.springframework.web.servlet.view.JstlView"
+                            p:prefix="/WEB-INF/views/"
+                            p:suffix=".jsp" />
+            </beans:list>
+        </beans:property>
+        <beans:property name="defaultViews">
+            <beans:list>
+                <beans:bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>       <!-- Not sure why MappingJackson2JsonView doesn't work -->
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+
+    <!--&lt;!&ndash; JSON VIEW &ndash;&gt;-->
+    <!--<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">-->
+        <!--<beans:property name="order" value="0"/>-->
+    <!--</beans:bean>-->
+    <!--<beans:bean name="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>-->
+
+    <!--&lt;!&ndash; Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory &ndash;&gt;-->
+    <!--<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<beans:property name="prefix" value="/WEB-INF/views/" />-->
+        <!--<beans:property name="suffix" value=".jsp" />-->
+        <!--<beans:property name="order" value="1" />-->
+    <!--</beans:bean>-->
+</beans:beans>
